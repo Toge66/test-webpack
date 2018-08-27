@@ -1,0 +1,40 @@
+{
+  "name": "dropDown",
+  "version": "0.0.1",
+  "description": "dropDown",
+  "author": "toge",
+  "license": "NO LICENSE",
+  "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "koa": "^2.5.2",
+    "less": "^3.8.1",
+    "webpack": "^4.17.1",
+    "webpack-dev-middleware": "^3.2.0",
+    "webpack-dev-server": "^3.1.6",
+    "webpack-hot-middleware": "^2.22.3"
+  },
+  "dependencies": {
+    "antd": "^3.8.2",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "style-loader": "^0.22.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "node server.js"
+  }
+}
