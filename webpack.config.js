@@ -1,14 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   performance: {
-    maxAssetSize: 512000
+    maxAssetSize: 10000000
   },
   module: {
     rules: [
@@ -26,6 +26,10 @@ module.exports = {
           // name: '[path][name].[ext]',
           outputPath: 'images'
         }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader'
       }
     ]
   }

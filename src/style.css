@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'my-font';
+  font-weight: 600;
+  font-style: normal;
+  src: url("./Jotia-Medium.ttf");
+}
 .hello {
+  font-family: 'my-font';
   color: red
 }
 
