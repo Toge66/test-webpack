@@ -29,7 +29,18 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          outputPath: 'files'
+        }
+      },
+      {
+        test: /\.(csv|tsv)$/,
+        loader: 'csv-loader'
+      },
+      {
+        test: /\.xml$/,
+        loader: 'xml-loader'
       }
     ]
   }

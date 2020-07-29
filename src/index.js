@@ -1,5 +1,6 @@
 import './style.css'
 import img from './111.jpg'
+import Data from './data.xml'
 
 function component() {
   const element = document.createElement('div');
@@ -12,6 +13,8 @@ function component() {
   image.classList.add('image')
 
   element.appendChild(image)
+
+  console.log(Data)
 
   return element;
 }

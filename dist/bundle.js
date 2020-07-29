@@ -5,7 +5,6 @@
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
-            console.log(moduleId)
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
@@ -155,7 +154,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"535c1f5a0a9225f357aa75344034d63d.ttf\");\n\n//# sourceURL=webpack:///./src/Jotia-Medium.ttf?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"files/535c1f5a0a9225f357aa75344034d63d.ttf\");\n\n//# sourceURL=webpack:///./src/Jotia-Medium.ttf?");
+
+/***/ }),
+
+/***/ "./src/data.xml":
+/*!**********************!*\
+  !*** ./src/data.xml ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = {\"note\":{\"to\":[\"Mary\"],\"from\":[\"John\"],\"heading\":[\"Reminder\"],\"body\":[\"Call Cindy on Tuesday\"]}}\n\n//# sourceURL=webpack:///./src/data.xml?");
 
 /***/ }),
 
@@ -167,7 +177,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _111_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./111.jpg */ \"./src/111.jpg\");\n\n\n\nfunction component() {\n  const element = document.createElement('div');\n\n  element.innerHTML = ['Hello', 'webpack'].join(' ');\n  element.classList.add('hello')\n\n  const image = new Image()\n  image.src = _111_jpg__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n  image.classList.add('image')\n\n  element.appendChild(image)\n\n  return element;\n}\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _111_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./111.jpg */ \"./src/111.jpg\");\n/* harmony import */ var _data_xml__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data.xml */ \"./src/data.xml\");\n/* harmony import */ var _data_xml__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_data_xml__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nfunction component() {\n  const element = document.createElement('div');\n\n  element.innerHTML = ['Hello', 'webpack'].join(' ');\n  element.classList.add('hello')\n\n  const image = new Image()\n  image.src = _111_jpg__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n  image.classList.add('image')\n\n  element.appendChild(image)\n\n  console.log(_data_xml__WEBPACK_IMPORTED_MODULE_2___default.a)\n\n  return element;\n}\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
