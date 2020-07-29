@@ -7,6 +7,9 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  performance: {
+    maxAssetSize: 512000
+  },
   module: {
     rules: [
       {
@@ -15,6 +18,14 @@ module.exports = {
             'style-loader',
             'css-loader',
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|git)$/,
+        loader: 'file-loader',
+        options: {
+          // name: '[path][name].[ext]',
+          outputPath: 'images'
+        }
       }
     ]
   }
