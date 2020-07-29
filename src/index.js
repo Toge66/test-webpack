@@ -1,10 +1,14 @@
-// import _ from 'lodash';
-function component() {
-  var element = document.createElement('div');
+import printMe from './print'
 
-  // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
-  // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+function component() {
+  const element = document.createElement('div');
   element.innerHTML = 'Hello webpack';
+
+  const btn = document.createElement('button')
+  btn.innerHTML = 'Click me and check the console';
+  btn.onclick = printMe
+
+  element.appendChild(btn)
 
   return element;
 }
