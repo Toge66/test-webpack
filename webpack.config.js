@@ -20,5 +20,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'hello htmlWebpackPlugin'
     })
-  ]
+  ],
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    host: '127.0.0.1',
+    port: 8888
+  }
 }
