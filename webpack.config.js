@@ -1,11 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 // const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-source-map',
+  // devtool: 'inline-cheap-source-map',
   entry: {
     app: './src/app.js',
     print: './src/print.js'
@@ -15,10 +15,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-      // new ManifestPlugin(),
-      new CleanWebpackPlugin(),
-      new HtmlWebpackPlugin({
-        title: 'hello htmlWebpackPlugin'
-      })
+    // new ManifestPlugin(),
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new HtmlWebpackPlugin({
+      title: 'hello htmlWebpackPlugin'
+    })
   ]
-};
+}
