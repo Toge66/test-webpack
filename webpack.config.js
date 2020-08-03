@@ -11,15 +11,15 @@ module.exports = {
     print: './src/print.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    // filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
   },
   plugins: [
     // new ManifestPlugin(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: 'hello htmlWebpackPlugin'
+      title: 'Caching'
     })
   ],
   devServer: {
