@@ -13,7 +13,7 @@ module.exports = {
   output: {
     // filename: '[name].bundle.js',
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     // new ManifestPlugin(),
@@ -22,6 +22,18 @@ module.exports = {
       title: 'Caching'
     })
   ],
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     host: '127.0.0.1',
