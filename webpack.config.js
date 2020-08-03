@@ -23,6 +23,7 @@ module.exports = {
     })
   ],
   optimization: {
+    moduleIds: 'hashed',
     runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
