@@ -1,24 +1,15 @@
 const path = require('path');
 
-module.exports = {
-  mode: "development",
-  entry: './src/index.js',
-  output: {
-    filename: 'webpack-numbers.js',
-    path: path.resolve(__dirname, 'dist'),
-    library: 'webpackNumbers',
-    libraryTarget: 'umd'
-  },
-  // devtool: 'source-map',
-  // optimization: {
-  //   runtimeChunk: true
-  // },
-  externals: {
-    lodash: {
-      commonjs: 'lodash',
-      commonjs2: 'lodash',
-      amd: 'lodash',
-      root: '_',
-    }
-  }
+module.exports = env => {
+  // Use env.<YOUR VARIABLE> here:
+  console.log('NODE_ENV: ', env.NODE_ENV); // 'local'
+  console.log('Production: ', env.production); // true
+
+  return {
+    entry: './src/index.js',
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+  };
 };
