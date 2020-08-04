@@ -5,12 +5,14 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'webpack-numbers.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    library: 'webpackNumbers',
+    libraryTarget: 'umd'
   },
-  devtool: 'source-map',
-  optimization: {
-    runtimeChunk: true
-  },
+  // devtool: 'source-map',
+  // optimization: {
+  //   runtimeChunk: true
+  // },
   externals: {
     lodash: {
       commonjs: 'lodash',
