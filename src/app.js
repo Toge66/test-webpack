@@ -1,5 +1,4 @@
-// import printMe from './print'
-import _ from 'lodash'
+import printMe from './print'
 
 function component() {
   const element = document.createElement('div')
@@ -7,7 +6,7 @@ function component() {
 
   const btn = document.createElement('button')
   btn.innerHTML = 'Click me and check the console'
-  // btn.onclick = printMe.bind(null, 'hello cache')
+  btn.onclick = printMe.bind(null, 'hello cache')
 
   element.appendChild(btn)
 
@@ -15,3 +14,10 @@ function component() {
 }
 
 document.body.appendChild(component())
+
+if (module.hot) {
+  module.hot.accept('./print.js', function() {
+    console.log('Accepting the updated printMe module!')
+    printMe()
+  })
+}

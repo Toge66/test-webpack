@@ -5,21 +5,18 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  // devtool: 'inline-cheap-source-map',
   entry: {
     app: './src/app.js',
-    print: './src/print.js'
   },
   output: {
-    // filename: '[name].bundle.js',
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     // new ManifestPlugin(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: 'Caching'
+      title: 'Hot Module Replacement'
     })
   ],
   optimization: {
@@ -38,6 +35,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     host: '127.0.0.1',
-    port: 8888
+    port: 8888,
+    hot: true
   }
 }
